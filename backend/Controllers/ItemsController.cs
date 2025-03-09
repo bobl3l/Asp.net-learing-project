@@ -26,7 +26,7 @@ namespace backend.Controllers
             return await _context.Items.ToListAsync();
         }
 
-        // GET: api/Items/5
+        // GET: api/Items/id
         [HttpGet("{id}")]
         public async Task<ActionResult<Item>> GetItem(int id)
         {
