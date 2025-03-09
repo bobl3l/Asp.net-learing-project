@@ -13,7 +13,7 @@ const Navbar = ({ cartItemCount }) => {
     <BootstrapNavbar bg="light" expand="lg">
       <Container>
         <BootstrapNavbar.Brand as={Link} to="/">
-          E-Shop
+          TechStop
         </BootstrapNavbar.Brand>
         <BootstrapNavbar.Toggle aria-controls="basic-navbar-nav" />
         <BootstrapNavbar.Collapse id="basic-navbar-nav">

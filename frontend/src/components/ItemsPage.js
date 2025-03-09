@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Row, Col } from "react-bootstrap";
 import ItemCard from "./ItemCard";
 import ItemModal from "./ItemModal";
+import axiosInstance from "../utils/axiosConfig";
 
 const ItemsPage = ({ addToCart }) => {
   const [items, setItems] = useState([]);
@@ -12,13 +13,8 @@ const ItemsPage = ({ addToCart }) => {
   useEffect(() => {
     const fetchItems = async () => {
       try {
-        const response = await fetch("https://localhost:7000/api/Items");
-        if (response.ok) {
-          const data = await response.json();
-          setItems(data);
-        } else {
-          console.error("Failed to fetch items");
-        }
+        const response = await axiosInstance.get("/Items");
+        setItems(response.data);
       } catch (error) {
         console.error("Error fetching items:", error);
       } finally {

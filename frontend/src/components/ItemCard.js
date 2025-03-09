@@ -14,7 +14,15 @@ const ItemCard = ({ item, onClick, addToCart }) => {
       onClick={onClick}
       style={{ cursor: "pointer" }}
     >
-      <Card.Img variant="top" src={item.image} />
+      <Card.Img
+        variant="top"
+        src={item.image}
+        style={{
+          height: "200px",
+          objectFit: "contain",
+          padding: "10px",
+        }}
+      />
       <Card.Body>
         <Card.Title>{item.name}</Card.Title>
         <Card.Text>${item.price.toFixed(2)}</Card.Text>
