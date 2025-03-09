@@ -36,6 +36,7 @@ TechStop is a modern e-commerce platform built with React.js and .NET 9. The app
 ### db setup
 
 delete the .db file before loading backend(dotnet run)
+To check swagger: localhost/swagger/index.html
 
 ### Frontend Setup
 
